@@ -18,7 +18,7 @@
             $staffList = [];
             require("connection_connect.php");
             $sql = "SELECT * FROM STAFF";
-            $result = conn->query($sql);
+            $result =$conn->query($sql);
             while($my_row = $result->fetch_assoc())
             {
                 $id = $my_row["S_ID"];
