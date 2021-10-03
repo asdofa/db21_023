@@ -1,5 +1,6 @@
 <?php
-$controllers = array('pages'=>['home', 'error']); //list controller
+$controllers = array('pages'=>['home', 'error'],
+'quotation'=>['index','newQuotation','addQuotation','search','updateForm','update','deleteConfirm','delete']); //list controller
 
 function call($controller, $action){
 	echo "routes to ".$controller."-".$action."<br>";
