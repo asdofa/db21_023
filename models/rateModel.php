@@ -43,9 +43,9 @@
             require("connection_connec.php");
             $sql = "select * from PRODUCT NATURAL JOIN RATE WHERE PROD_ID LIKE '%$key%' or PROD_Name LIKE '%$key%' 
             or PROD_Category LIKE '%$key%' or PROD_Type LIKE '%$key%' or PROD_Minimum LIKE '%$key%' or PROD_Detail LIKE '%$key%' 
-            or PROD_QTY LIKE '%$key%' or PROD_Price LIKE '%$key%' or PROD_SCPrice LIKE '%$key%' or QTY_Rate LIKE '%$key%' "
-            $result = conn->query($sql);
-            while ($my_row = $result->fetch_assocc()) 
+            or PROD_QTY LIKE '%$key%' or PROD_Price LIKE '%$key%' or PROD_SCPrice LIKE '%$key%' or QTY_Rate LIKE '%$key%' ";
+            $result = $conn->query($sql);
+            while ($my_row = $result->fetch_assoc()) 
             {
                 $PROD_ID=$my_row["PROD_ID"];
                 $PROD_Name=$my_row["PROD_Name"];
