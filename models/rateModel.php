@@ -56,7 +56,7 @@
                 $PROD_Type = $my_row["PROD_Type"];
                 $PROD_Minimum = $my_row["PROD_Minimum"];
                 $PROD_Detail = $my_row["PROD_Detail"];
-                $RATE_ID = $my_row["RATE_ID"]
+                $RATE_ID = $my_row["RATE_ID"];
                 $PROD_QTY = $my_row["PROD_QTY"];
                 $PROD_Price = $my_row["PROD_Price"];
                 $PROD_SCPrice = $my_row["PROD_SCPrice"];
@@ -89,7 +89,7 @@
         public static function delete($id)
         {
             require("connection_connect.php");
-            $sql = "Delete from RATE WHERE RATE_ID = '$RATE_ID'"
+            $sql = "Delete from RATE WHERE RATE_ID = '$RATE_ID'";
             $result = $conn->query($sql);
             require("connection_close.php");
             return("update success $result row");
