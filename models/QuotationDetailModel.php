@@ -19,7 +19,7 @@ class QuotationDetail
 
     public static function getAll()
     {
-        $QuotationDetailList = [];
+        $quotationdetailList = [];
         require("connection_connect.php");
         $sql = "SELECT * FROM QUO_DETAIL NATURAL JOIN QUOTATION NATURAL JOIN PROD_STOCK NATURAL JOIN COLOR NATURAL JOIN PRODUCT";
         $result = $conn->query($sql);
@@ -35,10 +35,10 @@ class QuotationDetail
             $Color_ID = $my_row["Color_ID"];
             $Color_Name = $my_row["Color_Name"];
 
-            $QuotationDetailList[] = new QuotationDetail($QD_ID,$QUO_ID,$PRODSTOCK_ID,$QD_QTY,$QD_ColorQTY,$PROD_ID,$PROD_Name,$Color_ID,$Color_Name);
+            $quotationdetailList[] = new QuotationDetail($QD_ID,$QUO_ID,$PRODSTOCK_ID,$QD_QTY,$QD_ColorQTY,$PROD_ID,$PROD_Name,$Color_ID,$Color_Name);
 
         }
         require("connection_close.php");
-        return $QuotationDetailList;
+        return $quotationdetailList;
     }
 }

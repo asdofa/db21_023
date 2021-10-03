@@ -7,15 +7,16 @@
     ?>
 </select></label><br>
 
-<label>ProductID <select name="PRODSTOCK_ID">
+<label>Product_ID <select name="PRODSTOCK_ID">
 <?php foreach($productstockList as $PS){
-        echo "<option value = $PS->psid>
-        $PS->name $S->color</option>";}?>
+        echo "<option value = $PS->psid
+        >$PS->name $S->color</option>";}
+?>
 </select></label><br>
 
 <label>QD_QTY<input type="text" name="QD_QTY"/></label><br>
 <label>QD_ColorQTY<input type="text" name="QD_ColorQTY"/></label><br>
-<input type="hidden"name="controller"value="detailquotation"/>
+<input type="hidden"name="controller"value="QUO_DETAIL"/>
 <button type= "submit"name="action"value="index">back</button>
 <button type= "submit"name="action"value="addQuotationDetail">Save</button>
 
