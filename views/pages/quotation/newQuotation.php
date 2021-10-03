@@ -16,6 +16,6 @@
 
 <input type="hidden"name="controller"value="QUOTATION"/>
 <button type= "submit"name="action"value="index">back</button>
-<button type= "submit"name="action"value="addQUOTATION">Save</button>
+<button type= "submit"name="action"value="addQuotation">Save</button>
 
 </form>
