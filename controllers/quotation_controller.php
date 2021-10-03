@@ -24,7 +24,8 @@ class QuotationController
         $pdo_m=-1;
         Quotation::Add($qid,$date,$customer,$staff,$qcdt,$qdeposit,$pdo_m);
 
-        QuotationController::index();
+        (new QuotationController)->index();
+        //QuotationController::index();
     }
     public function search()
     {
@@ -53,7 +54,7 @@ class QuotationController
         $oldid=$_GET['oldid'];
         Quotation::Update($qid,$date,$customer,$staff,$qcdt,$qdeposit,$oldid);
 
-        QuotationController::index();
+        (new QuotationController)->index();
     }
 
     public function deleteConfirm()
@@ -66,7 +67,7 @@ class QuotationController
     {
         $id=$_GET['QUO_ID'];
         Quotation::delete($id);
-        QuotationController::index();
+        (new QuotationController)->index();
     }
     
 }
