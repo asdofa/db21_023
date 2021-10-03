@@ -25,7 +25,7 @@
                 $name = $my_row["S_Name"];
                 $position = $my_row["S_Position"];
                 $password = $my_row["S_Password"];
-                $staffList[] = new STAFF($id, $name, $position, $password);
+                $staffList[] = new Staff($id, $name, $position, $password);
             }
             require("connection_close.php");
             return $staffList;
