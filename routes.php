@@ -10,8 +10,8 @@ function call($controller, $action){
 						break;
 
 		case "quotation" :  require_once("models/quotationModel.php");
-								require_once("models/staffModel.php");
-								require_once("models/customerModel.php");
+								require_once("models/staffModels.php");
+								require_once("models/customerModels.php");
 								$controller = new QuotationController();
 								break;
 	}
