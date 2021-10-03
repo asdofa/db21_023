@@ -86,5 +86,13 @@
             require("connection_close.php");
             return("update success $result row");
         }
+        public static function delete($id)
+        {
+            require("connection_connect.php");
+            $sql = "Delete from RATE WHERE RATE_ID = '$RATE_ID'"
+            $result = $conn->query($sql);
+            require("connection_close.php");
+            return("update success $result row");
+        }
     }
 ?>
