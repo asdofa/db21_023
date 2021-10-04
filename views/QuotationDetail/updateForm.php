@@ -14,7 +14,7 @@
     <?php foreach($productstockList as $PS) {
         echo "<option value = $PS->psid";
         if($PS->psid==$quotationDetail->PRODSTOCK_ID){echo " selected='selected'";}
-         echo ">$PS->name $S->color</option>";}
+         echo ">$PS->name $PS->color</option>";}
     ?>
     </select></label><br> 
 
