@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<center>
 <head>
 <style>
 body {
@@ -28,7 +27,7 @@ body {
 </select></label><br>
 <label>เงื่อนไขชำระ(เครดิต/มัดจำ)<input type="text" name="QUO_PaymentTerms"/></label><br>
 <label>%มัดจำ(กรณีเป็นเครดิตให้ใส่ 0)<input type="text" name="QUO_Deposit"/></label><br>
-
+<center>
 <input type="hidden"name="controller"value="quotation"/>
 <button type= "submit"name="action"value="index">back</button>
 <button type= "submit"name="action"value="addQuotation">Save</button>
