@@ -1,9 +1,9 @@
-echo "dsgsdgsgsdggsgsggsgdsgsg";
+<p>in to new Quotation Detail</p>
 <form method="get" action="">
 <label>QD_ID <input type="text" name="QD_ID"/></label><br>
 
 <label>QUO_ID <select name="QUO_ID">
-<?php foreach($QUOTATION as $Q) {echo "<option value = $Q->QUO_ID>
+<?php foreach($quotationList as $Q) {echo "<option value = $Q->QUO_ID>
     $Q->QUO_ID</option>";}
     ?>
 </select></label><br>
