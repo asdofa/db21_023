@@ -100,7 +100,7 @@
         public static function delete($id)
         {
             require("connection_connect.php");
-            $sql = "Delete from RATE WHERE RATE_ID = '$RATE_ID'";
+            $sql = "DELETE FROM RATE WHERE RATE_ID = '$id'";
             $result = $conn->query($sql);
             require("connection_close.php");
             return("update success $result row");
