@@ -16,7 +16,7 @@
 
 <label>QD_QTY<input type="text" name="QD_QTY"/></label><br>
 <label>QD_ColorQTY<input type="text" name="QD_ColorQTY"/></label><br>
-<input type="hidden"name="controller"value="QUO_DETAIL"/>
+<input type="hidden"name="controller"value="quotationDetail"/>
 <button type= "submit"name="action"value="index">back</button>
 <button type= "submit"name="action"value="addQuotationDetail">Save</button>
 
