@@ -5,6 +5,7 @@
 <style>
 table {
   font-family: 'Arial';
+  background-color: #f4f4f4;
   font-size: 20px;
   text-align: center;
   margin: 25px auto;
@@ -12,7 +13,7 @@ table {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
 }
 table tr:hover {
-  background: #f4f4f4;
+  background: #eb8c4a;
 }
 table tr:hover td {
   color: #000;
