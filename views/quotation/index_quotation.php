@@ -6,7 +6,6 @@
 table {
   font-family: 'Arial';
   font-size: 20px;
-  padding: 12px 30px;
   text-align: center;
   margin: 25px auto;
   border-collapse: collapse;
@@ -20,6 +19,7 @@ table tr:hover td {
 }
 table th, table td {
   color: #555;
+  padding: 12px 30px;
   border: 1px solid #eee;
   
   border-collapse: collapse;
