@@ -10,9 +10,8 @@
                }
     </style>
     <body>
-    <p style="font-size:50px">Welcome</p>
-    <p style="font-size:50px">to</p>
-        <a href="https://fontmeme.com/cocomelon-font/"><img src="https://fontmeme.com/permalink/211004/980ff786175c726a858cb03af2568001.png" alt="cocomelon-font" border="0"></a><br><br>
+    <br>
+        <img src="https://fontmeme.com/permalink/211004/980ff786175c726a858cb03af2568001.png" alt="cocomelon-font" border="0"><br><br>
         <br><br><br>
     </body>
 
