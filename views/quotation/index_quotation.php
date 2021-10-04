@@ -6,6 +6,7 @@
 table {
   font-family: 'Arial';
   font-size: 20px;
+  padding: 12px;
   text-align: center;
   margin: 25px auto;
   border-collapse: collapse;
