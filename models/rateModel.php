@@ -22,7 +22,7 @@
         {
             $rateList=[];
             require("connection_connect.php");
-            $sql="SELECT * FROM RATE NATURAL JOIN PRODUCT ";
+            $sql="SELECT * FROM RATE NATURAL JOIN PRODUCT";
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc())
             {
@@ -82,8 +82,7 @@
         public static function add($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate)
         {
             require("connection_connect.php");
-            $sql = "insert into RATE(PROD_ID,RATE_ID,PROD_QTY,PROD_Price,PROD_SCPrice,QTY_Rate) 
-            values ('$PROD_ID','$RATE_ID','$PROD_QTY','$PROD_Price','$PROD_SCPrice','$QTY_Rate')";
+            $sql = "insert into `RATE` (`PROD_ID`,`RATE_ID`,`PROD_QTY,PROD_Price`,`PROD_SCPrice`,`QTY_Rate`) values ('$PROD_ID','$RATE_ID','$PROD_QTY','$PROD_Price','$PROD_SCPrice','$QTY_Rate')";
             $result = $conn->query($sql);
             require("connection_close.php");
             return("add success $result row");
