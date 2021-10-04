@@ -1,5 +1,5 @@
 <table border = 1>
-<tr> 
+<tr>
     <td>ProductID</td>
     <td>PROD_Name</td>
     <td>RATE_ID</td>
