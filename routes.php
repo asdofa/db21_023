@@ -20,8 +20,7 @@ function call($controller, $action){
 								 require_once("models/productModel.php");
 								 $controller = new QuotationDetailController();
 								 break;
-		case "rate" : 	echo "dompsmgpms";
-						require_once("models/rateModel.php");
+		case "rate" : 	require_once("models/rateModel.php");
 						require_once("models/productModel.php");
 						$controller = new RateController();
 						break;

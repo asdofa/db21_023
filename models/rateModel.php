@@ -26,13 +26,13 @@
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc())
             {
-                $PROD_ID = $my_row["PROD_ID"];
-                $PROD_Name = $my_row["PROD_Name"];
-                $RATE_ID = $my_row["RATE_ID"];
-                $PROD_QTY = $my_row["PROD_QTY"];
-                $PROD_Price = $my_row["PROD_Price"];
-                $PROD_SCPrice = $my_row["PROD_SCPrice"];
-                $QTY_Rate = $my_row["QTY_Rate"];
+                $PROD_ID = $my_row[PROD_ID];
+                $PROD_Name = $my_row[PROD_Name];
+                $RATE_ID = $my_row[RATE_ID];
+                $PROD_QTY = $my_row[PROD_QTY];
+                $PROD_Price = $my_row[PROD_Price];
+                $PROD_SCPrice = $my_row[PROD_SCPrice];
+                $QTY_Rate = $my_row[QTY_Rate];
                 $rateList[] = new RATE($PROD_ID,$PROD_Name,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
             }
             require("connection_close.php");
@@ -48,13 +48,13 @@
             $result = $conn->query($sql);
             while ($my_row = $result->fetch_assoc()) 
             {
-                $PROD_ID = $my_row["PROD_ID"];
-                $PROD_Name = $my_row["PROD_Name"];
-                $RATE_ID = $my_row["RATE_ID"];
-                $PROD_QTY = $my_row["PROD_QTY"];
-                $PROD_Price = $my_row["PROD_Price"];
-                $PROD_SCPrice = $my_row["PROD_SCPrice"];
-                $QTY_Rate = $my_row["QTY_Rate"];
+                $PROD_ID = $my_row[PROD_ID];
+                $PROD_Name = $my_row[PROD_Name];
+                $RATE_ID = $my_row[RATE_ID];
+                $PROD_QTY = $my_row[PROD_QTY];
+                $PROD_Price = $my_row[PROD_Price];
+                $PROD_SCPrice = $my_row[PROD_SCPrice];
+                $QTY_Rate = $my_row[QTY_Rate];
                 $rateList[] = new RATE($PROD_ID,$PROD_Name,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
             }
             require("connection_close.php");
@@ -67,13 +67,13 @@
             $sql = "SELECT * FROM RATE NATURAL JOIN PRODUCT WHERE PRI_ID = '$RATE_ID' ";
             $result = $conn->query($sql);
             $my_row = $result->fetch_assoc();
-            $PROD_ID = $my_row["PROD_ID"];
-            $PROD_Name = $my_row["PROD_Name"];
-            $RATE_ID = $my_row["RATE_ID"];
-            $PROD_QTY = $my_row["PROD_QTY"];
-            $PROD_Price = $my_row["PROD_Price"];
-            $PROD_SCPrice = $my_row["PROD_SCPrice"];
-            $QTY_Rate = $my_row["QTY_Rate"];
+            $PROD_ID = $my_row[PROD_ID];
+            $PROD_Name = $my_row[PROD_Name];
+            $RATE_ID = $my_row[RATE_ID];
+            $PROD_QTY = $my_row[PROD_QTY];
+            $PROD_Price = $my_row[PROD_Price];
+            $PROD_SCPrice = $my_row[PROD_SCPrice];
+            $QTY_Rate = $my_row[QTY_Rate];
             require(" connection_close.php");
             return new Rate($PROD_ID,$PROD_Name,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
 
