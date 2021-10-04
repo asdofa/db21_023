@@ -5,13 +5,13 @@ class RateController
     {
         echo "index";
         $rateList = Rate::getAll();
-        require_once("./views/rate/index_rate.php");
+        require_once("./views/rate/Index_rate.php");
     }
     public function searchRate()
     {
         $key=$_GET['key'];
         $rateList = Rate::search($key);
-        require_once("./views/rate/index_rate.php");
+        require_once("./views/rate/Index_rate.php");
     }
     public function newRate()
     {
