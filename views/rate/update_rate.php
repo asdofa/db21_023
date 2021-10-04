@@ -25,5 +25,5 @@
     <input type="hidden"name="controller"value="rate"/>
     <input type="hidden" name="RATE_ID" value="<?php echo $rate->RATE_ID; ?>"/>
     <button type= "submit"name="action"value="index">back</button>
-    <button type= "submit"name="action"value="update">update</button>
+    <button type= "submit"name="action"value="updateRate">update</button>
 </form>
