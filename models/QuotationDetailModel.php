@@ -24,16 +24,16 @@ class QuotationDetail
         $sql = "SELECT * FROM QUO_DETAIL NATURAL JOIN QUOTATION NATURAL JOIN PROD_STOCK NATURAL JOIN COLOR NATURAL JOIN PRODUCT";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
-            $QD_ID = $my_row["QD_ID"];
-            $QUO_ID = $my_row["QUO_ID"];
-            $PRODSTOCK_ID = $my_row["PRODSTOCK_ID"];
-            $QD_QTY = $my_row["QD_QTY"];
-            $QD_ColorQTY = $my_row["QD_ColorQTY"];
+            $QD_ID = $my_row[QD_ID];
+            $QUO_ID = $my_row[QUO_ID];
+            $PRODSTOCK_ID = $my_row[PRODSTOCK_ID];
+            $QD_QTY = $my_row[QD_QTY];
+            $QD_ColorQTY = $my_row[QD_ColorQTY];
     
-            $PROD_ID = $my_row["PROD_ID"];
-            $PROD_Name = $my_row["PROD_Name"];
-            $Color_ID = $my_row["Color_ID"];
-            $Color_Name = $my_row["Color_Name"];
+            $PROD_ID = $my_row[PROD_ID];
+            $PROD_Name = $my_row[PROD_Name];
+            $Color_ID = $my_row[Color_ID];
+            $Color_Name = $my_row[Color_Name];
 
             $quotationdetailList[] = new QuotationDetail($QD_ID,$QUO_ID,$PRODSTOCK_ID,$QD_QTY,$QD_ColorQTY,$PROD_ID,$PROD_Name,$Color_ID,$Color_Name);
 
