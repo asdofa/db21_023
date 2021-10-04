@@ -51,7 +51,7 @@ class RateController
     }
     public function deleteRateConfirm()
     {
-        $ID=$_GET['RATE_ID'];
+        $ID = $_GET['RATE_ID'];
         $rate = Rate::get($ID);
         require_once("./views/rate/delete_rate_Confirm.php");
     }
