@@ -48,14 +48,6 @@ class RateController
         $QTY_Rate = $_GET['QTY_Rate'];
         $ORATE_ID = $_GET['ORATE_ID'];
 
-        echo $RATE_ID ;
-        echo $PROD_ID ;
-        echo $PROD_QTY ;
-        echo $PROD_Price ;
-        echo $PROD_SCPrice ;
-        echo $QTY_Rate ;
-        echo $ORATE_ID ;
-
         Rate::update($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate,$ORATE_ID);
         RateController::index();
     }
