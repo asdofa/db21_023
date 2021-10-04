@@ -94,10 +94,10 @@ class QuotationDetail
         return "add success $result rows";
     }
 
-    public static function update($QD_ID,$QUO_ID,$PRODSTOCK_ID,$QD_QTY,$QD_ColorQTY,$PROD_ID,$PROD_Name,$Color_ID,$Color_Name)
+    public static function update($QUO_ID,$QD_ID,$PRODSTOCK_ID,$PROD_ID,$Color_ID,$QD_QTY,$QD_ColorQTY)
     {
         require("connection_connect.php");
-        $sql = "UPDATE QUO_DETAIL SET QUO_ID = '$QUO_ID', PRODSTOCK_ID = '$PRODSTOCK_ID', QD_QTY = '$QD_QTY', QD_ColorQTY = '$QD_ColorQTY', PROD_ID = '$PROD_ID', PROD_Name = '$PROD_Name', Color_ID = '$Color_ID', Color_Name = '$Color_Name' WHERE QD_ID = '$QD_ID'";
+        $sql = "UPDATE QUO_DETAIL SET QUO_ID = '$QUO_ID', PRODSTOCK_ID = '$PRODSTOCK_ID', QD_QTY = '$QD_QTY', QD_ColorQTY = '$QD_ColorQTY', PROD_ID = '$PROD_ID', Color_ID = '$Color_ID' WHERE QD_ID = '$QD_ID'";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "update success $result row";
