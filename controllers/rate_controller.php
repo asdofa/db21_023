@@ -6,18 +6,18 @@ class RateController
         $RateList = Rate::getAll();
         require_once("./views/rate/index_rate.php");
     }
-    public function search()
+    public function searchRate()
     {
         $key=$_GET['key'];
         $RateList = Rate::search($key);
         require_once("./views/rate/index_rate.php");
     }
-    public function newPriceproduct()
+    public function newRate()
     {
         $RateList = Rate::getAll();
         require_once("./views/rate/index_rate.php");
     }
-    public function addPriceproduct()
+    public function addRate()
     {
         $RATE_ID = $_GET['RATE_ID'];
         $PROD_ID = $_GET['PROD_ID'];
@@ -29,7 +29,7 @@ class RateController
         RateController::index();
 
     }
-    public function updateForm()
+    public function updateFormRate()
     {
         $ID=$_GET['RATE_ID'];
         $RATE = Rate::get($ID);
@@ -37,7 +37,7 @@ class RateController
         require_once("./views/rate/index_rate.php");
     }
 
-    public function update()
+    public function updateRate()
     {
 
         $RATE_ID = $_GET['RATE_ID'];
@@ -50,13 +50,13 @@ class RateController
         Rate::update($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
         RateController::index();
     }
-    public function deleteConfirm()
+    public function deleteRateConfirm()
     {
         $ID=$_GET['RATE_ID'];
         $RATE = Rate::get($ID);
         require_once("./views/rate/index_rate.php");
     }
-    public function delete()
+    public function deleteRate()
     {
         $ID=$_GET['PRI_ID'];
         Rate::delete($ID);
