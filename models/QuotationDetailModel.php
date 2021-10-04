@@ -85,10 +85,10 @@ class QuotationDetail
         return $quotationDetailList;
     }
 
-    public static function add($QD_ID,$QUO_ID,$PRODSTOCK_ID,$QD_QTY,$QD_ColorQTY,$PROD_ID,$PROD_Name,$Color_ID,$Color_Name)
+    public static function add($QUO_ID,$QD_ID,$PRODSTOCK_ID,$PROD_ID,$Color_ID,$QD_QTY,$QD_ColorQTY)
     {
         require("connection_connect.php");
-        $sql = "INSERT INTO `QUO_DETAIL` (`QD_ID`, `QUO_ID`, `PRODSTOCK_ID`, `QD_QTY`, `QD_ColorQTY`, `PROD_ID`, `PROD_Name`, `Color_ID`, `Color_Name`) VALUES ('$QD_ID', '$QUO_ID', '$PRODSTOCK_ID', '$QD_QTY', '$QD_ColorQTY', '$PROD_ID', '$PROD_Name', '$Color_ID', '$Color_Name')";
+        $sql = "INSERT INTO `QUO_DETAIL` (`QUO_ID`, `QD_ID`, `PRODSTOCK_ID`, `PROD_ID`, `Color_ID`,`QD_QTY`, `QD_ColorQTY`) VALUES ('$QUO_ID', '$QD_ID', '$PRODSTOCK_ID', '$PROD_ID', '$Color_ID','$QD_QTY', '$QD_ColorQTY')";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "add success $result rows";

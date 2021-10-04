@@ -14,7 +14,8 @@ body {
 <body>
 
 <?php echo "<br> ยืนยันจะลบใบเสนอราคา? <br>
-            <br> $quotation->QUO_ID $quotation->C_Name <br>"; ?>
+<br>
+            <br> $quotation->QUO_ID $quotation->C_Name <br><br>"; ?>
 
 <form method="get" action="">
 
