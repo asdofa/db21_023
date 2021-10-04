@@ -7,6 +7,7 @@
 <td>ที่อยู่ลูกค้า</td>
 <td>เบอร์โทร</td>
 <td>เงื่อนไขชำระ</td>
+<td>เปอร์เซ็นมัดจำ</td>
 <td>update</td>
 <td>delete</td>
 </tr>
@@ -29,7 +30,8 @@ search</button>
     <td>$quotation->S_Name</td> 
     <td>$quotation->C_Address</td>
     <td>$quotation->C_Phone</td> 
-    <td>$quotation->QUO_PaymentTerms</td> 
+    <td>$quotation->QUO_PaymentTerms</td>
+    <td>$quotation->QUO_Deposit</td> 
     <td><a href=?controller=quotation&action=updateForm&QUO_ID=$quotation->QUO_ID>update</a></td>
     <td><a href=?controller=quotation&action=deleteConfirm&QUO_ID=$quotation->QUO_ID>delete</a></td>
     </tr>"; 

@@ -51,17 +51,9 @@ class QuotationController
         $qcdt=$_GET['QUO_PaymentTerms'];
         $qdeposit=$_GET['QUO_Deposit'];
         $oldid=$_GET['oldid'];
-
-        echo $qid;
-        echo $date;
-        echo $customer;
-        echo $staff;
-        echo $qcdt;
-        echo $qdeposit;
         
         Quotation::Update($qid,$date,$customer,$staff,$qcdt,$qdeposit,$oldid);
-
-        (new QuotationController)->index();
+        QuotationController::index();
     }
 
     public function deleteConfirm()
@@ -74,7 +66,7 @@ class QuotationController
     {
         $id=$_GET['QUO_ID'];
         Quotation::delete($id);
-        (new QuotationController)->index();
+        QuotationController::index();
     }
     
 }
