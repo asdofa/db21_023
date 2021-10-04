@@ -16,7 +16,7 @@ function call($controller, $action){
 							break;
 		case "rate" : 	echo "dompsmgpms";
 						require_once("models/rateModel.php");
-						require_once("models/ProductModel.php");
+						require_once("models/productModel.php");
 						$controller = new RateController();
 						break;
 	}
