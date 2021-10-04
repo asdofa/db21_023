@@ -7,10 +7,12 @@ function call($controller, $action){
 	require_once("controllers/" .$controller." controller.php"); 
 	switch($controller)
 	{
-		case "pages":	$controller = new PagesController();
+		case "pages":	echo "hi";
+						$controller = new PagesController();
 						break;
 
-		case "quotation" :  require_once("models/quotationModel.php");
+		case "quotation" :  	
+								require_once("models/quotationModel.php");
 								require_once("models/staffModels.php");
 								require_once("models/customerModels.php");
 								$controller = new QuotationController();

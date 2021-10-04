@@ -3,6 +3,7 @@ class QuotationController
 {
     public function index()
     {
+        echo "go";
         $quotationList = Quotation::getAll();
         require_once("./views/quotation/index_quotation.php");
     }
