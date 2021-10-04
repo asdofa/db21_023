@@ -4,9 +4,9 @@
     <td>PROD_Name</td>
     <td>RATE_ID</td>
     <td>PROD_QTY</td>
+    <td>QTY_Rate</td>
     <td>PROD_Price</td>
     <td>PROD_SCPrice</td>
-    <td>QTY_Rate</td>
     <td>Update</td>
     <td>Delete</td>
 </tr>
@@ -29,8 +29,10 @@
 <?php foreach($rateList as $rate)
     {
         echo"<tr>
-        <td>$rate->RATE_ID</td>
+        <td>$rate->PROD_ID</td>
         <td>$rate->PROD_Name</td>
+        <td>$rate->RATE_ID</td>
+        <td>$rate->PROD_QTY</td>
         <td>$rate->QTY_Rate</td>
         <td>$rate->PROD_Price</td>
         <td>$rate->PROD_SCPrice</td>
