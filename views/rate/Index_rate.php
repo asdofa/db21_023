@@ -15,7 +15,7 @@
     <p>นาย วัชรศักดิ์ ชื่นชม 6220503341</p>
 <br /> 
 
-    Add <a href=?controller=priceproduct&action=newPriceproduct>click</a><br>
+    Add <a href=?controller=rate&action=newRate>click</a><br>
 <br/>
 
 <form method="get"action="">
@@ -34,8 +34,8 @@
         <td>$rate->QTY_Rate</td>
         <td>$rate->PROD_Price</td>
         <td>$rate->PROD_SCPrice</td>
-        <td><a href=?controller=priceproduct&action=updateForm&PRI_ID=$rate->RATE_ID>update</a></td>
-        <td><a href=?controller=priceproduct&action=deleteConfirm&PRI_ID=$rate->RATE_ID>delete</a></td>
+        <td><a href=?controller=rate&action=updateFormRate&RATE_ID=$rate->RATE_ID>update</a></td>
+        <td><a href=?controller=rate&action=deleteRateConfirm&RATE_ID=$rate->RATE_ID>delete</a></td>
         </tr>";
     }
     echo "</table>";
