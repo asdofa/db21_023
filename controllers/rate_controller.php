@@ -33,7 +33,7 @@ class RateController
     {
         $ID=$_GET['RATE_ID'];
         $rate = Rate::get($ID);
-        $rateList = product::getAll();
+        $productList = Product::getAll();
         require_once("./views/rate/update_rate.php");
     }
 
