@@ -3,6 +3,7 @@ class RateController
 {
     public function index()
     {
+        echo "index";
         $RateList = Rate::getAll();
         require_once("./views/rate/index_rate.php");
     }
