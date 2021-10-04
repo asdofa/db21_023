@@ -13,7 +13,7 @@
         value = "<?php echo $rate->PROD_QTY;?>"/></label><br>
 
     <label>QTY_RATE(MAX)<input type="text" name="QTY_RATE"
-        value = "<?php echo $rate->QTY_RATE;?>"/></label><br>
+        value = "<?php echo $rate->QTY_Rate;?>"/></label><br>
 
     <label>Price<input type="text" name="PROD_Price"
         value = "<?php echo $rate->PROD_Price;?>"/></label><br>
