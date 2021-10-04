@@ -25,7 +25,7 @@
         value="<?php echo $QUO_DETAIL->QD_ColorQTY;?>"/></label><br>
 
 
-<input type="hidden"name="controller"value="detailquotation"/>
+<input type="hidden"name="controller"value="quotationDetail"/>
 <input type="hidden" name="oldid" value="<?php echo $QUO_DETAIL->QD_ID; ?>"/>
 <button type= "submit"name="action"value="index">back</button>
 <button type= "submit"name="action"value="update">update</button>
