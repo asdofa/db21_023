@@ -8,6 +8,7 @@ class QuotationDetailController
     }
     public function newQuotationDetail() 
     {
+        $quotationDetailList = QuotationDetail::getAll();
         $quotationList = Quotation::getAll();
         $productstockList = ProductStock::getAll();
         $productList = Product::getAll();
