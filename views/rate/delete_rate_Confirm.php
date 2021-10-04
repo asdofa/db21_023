@@ -1,5 +1,5 @@
 <?php echo "<br> คุณยืนยันการกระทำนี้หรือไม่? <br>
-            <br> $RATE->RATE_ID <br>"; ?>
+            <br> $RATE->RATE_ID $rate->RATE_ID<br>"; ?>
 
 <form method="get" action="">
 
