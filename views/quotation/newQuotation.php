@@ -14,7 +14,7 @@
 <label>เงื่อนไขชำระ(เครดิต/มัดจำ)<input type="text" name="QUO_PaymentTerms"/></label><br>
 <label>%มัดจำ(กรณีเป็นเครดิตให้ใส่ 0)<input type="text" name="QUO_Deposit"/></label><br>
 
-<input type="hidden"name="controller"value="QUOTATION"/>
+<input type="hidden"name="controller"value="quotation"/>
 <button type= "submit"name="action"value="index">back</button>
 <button type= "submit"name="action"value="addQuotation">Save</button>
 

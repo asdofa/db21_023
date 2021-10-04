@@ -1,22 +1,18 @@
 <?php
-$controllers = array('pages'=>['home', 'error'],
-'quotation'=>['index','newQuotation','addQuotation','search','updateForm','update','deleteConfirm','delete']); //list controller
+$controllers = array('pages'=>['home', 'error'],'quotation'=>['index','newQuotation','addQuotation','search','updateForm','update','deleteConfirm','delete']); 
 
 function call($controller, $action){
 	echo "routes to ".$controller."-".$action."<br>";
-	require_once("controllers/" .$controller." controller.php"); 
+	require_once("./controllers/" .$controller."_controller.php"); 
 	switch($controller)
 	{
-		case "pages":	echo "hi";
-						$controller = new PagesController();
+		case "pages":	$controller = new PagesController();
 						break;
-
-		case "quotation" :  	
-								require_once("models/quotationModel.php");
-								require_once("models/staffModels.php");
-								require_once("models/customerModels.php");
-								$controller = new QuotationController();
-								break;
+		case "quotation" : 	require_once("models/quotationModel.php");
+							require_once("models/staffModels.php");
+							require_once("models/customerModels.php");
+							$controller = new QuotationController();
+							break;
 	}
 
 	$controller->{$action}();

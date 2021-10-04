@@ -3,7 +3,6 @@ class QuotationController
 {
     public function index()
     {
-        echo "go";
         $quotationList = Quotation::getAll();
         require_once("./views/quotation/index_quotation.php");
     }
@@ -22,11 +21,10 @@ class QuotationController
         $staff=$_GET['S_Name'];
         $qcdt=$_GET['QUO_PaymentTerms'];
         $qdeposit=$_GET['QUO_Deposit'];
-        $pdo_m=-1;
-        Quotation::Add($qid,$date,$customer,$staff,$qcdt,$qdeposit,$pdo_m);
 
-        (new QuotationController)->index();
-        //QuotationController::index();
+        Quotation::Add($qid,$date,$customer,$staff,$qcdt,$qdeposit);
+
+        QuotationController::index();
     }
     public function search()
     {
@@ -53,6 +51,14 @@ class QuotationController
         $qcdt=$_GET['QUO_PaymentTerms'];
         $qdeposit=$_GET['QUO_Deposit'];
         $oldid=$_GET['oldid'];
+
+        echo $qid;
+        echo $date;
+        echo $customer;
+        echo $staff;
+        echo $qcdt;
+        echo $qdeposit;
+        
         Quotation::Update($qid,$date,$customer,$staff,$qcdt,$qdeposit,$oldid);
 
         (new QuotationController)->index();

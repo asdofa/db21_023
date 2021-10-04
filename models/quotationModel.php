@@ -27,17 +27,17 @@ class Quotation
         $sql = "SELECT * FROM QUOTATION NATURAL JOIN CUSTOMER NATURAL JOIN STAFF ORDER BY QUO_ID";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
-            $q_id = $my_row["QUO_ID"];
-            $date = $my_row["QUO_Date"];
-            $c_name = $my_row["C_Name"];
-            $s_name = $my_row["S_Name"];
-            $c_add = $my_row["C_Address"];
-            $c_phone = $my_row["C_Phone"];
+            $q_id = $my_row[QUO_ID];
+            $date = $my_row[QUO_Date];
+            $c_name = $my_row[C_Name];
+            $s_name = $my_row[S_Name];
+            $c_add = $my_row[C_Address];
+            $c_phone = $my_row[C_Phone];
 
-            $c_id = $my_row["C_ID"];
-            $s_id = $my_row["S_ID"];
-            $q_cdt = $my_row["QUO_PaymentTerms"];
-            $q_deposit = $my_row["QUO_Deposit"];
+            $c_id = $my_row[C_ID];
+            $s_id = $my_row[S_ID];
+            $q_cdt = $my_row[QUO_PaymentTerms];
+            $q_deposit = $my_row[QUO_Deposit];
 
             $quotationList[] = new Quotation($q_id,$date,$c_name,$s_name,$c_add,$c_phone,$c_id,$s_id,$q_cdt,$q_deposit);
         }
@@ -45,11 +45,10 @@ class Quotation
         return $quotationList;
     }
 
-    public static function Add($q_id,$q_date,$id_cus,$id_emp,$q_cdt,$q_deposit,$pdo_m)
+    public static function Add($q_id,$q_date,$id_cus,$id_emp,$q_cdt,$q_deposit)
     { 
        require("connection_connect.php");
-       $float = (float)$qdeposit;
-       $sql = "INSERT INTO `QUOTATION` (`QUO_ID`, `QUO_Date`, `S_ID`, `C_ID`, `QUO_PaymentTerms`, `QUO_Deposit`, `PercenPROD`) VALUES ('$q_id', '$q_date', '$id_emp', '$id_cus', '$q_cdt', '$q_deposit','$pdo_m')";
+       $sql = "INSERT INTO `QUOTATION` (`QUO_ID`, `QUO_Date`, `S_ID`, `C_ID`, `QUO_PaymentTerms`, `QUO_Deposit`) VALUES ('$q_id', '$q_date', '$id_emp', '$id_cus', '$q_cdt', '$q_deposit')";
        $result = $conn->query($sql);
        require("connection_close.php");
        return  ;
@@ -62,17 +61,17 @@ class Quotation
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
-            $q_id = $my_row["QUO_ID"];
-            $date = $my_row["QUO_Date"];
-            $c_name = $my_row["C_Name"];
-            $s_name = $my_row["S_Name"];
-            $c_add = $my_row["C_Address"];
-            $c_phone = $my_row["C_Phone"];
+            $q_id = $my_row[QUO_ID];
+            $date = $my_row[QUO_Date];
+            $c_name = $my_row[C_Name];
+            $s_name = $my_row[S_Name];
+            $c_add = $my_row[C_Address];
+            $c_phone = $my_row[C_Phone];
 
-            $c_id = $my_row["C_ID"];
-            $s_id = $my_row["S_ID"];
-            $q_cdt = $my_row["QUO_PaymentTerms"];
-            $q_deposit = $my_row["QUO_Deposit"];
+            $c_id = $my_row[C_ID];
+            $s_id = $my_row[S_ID];
+            $q_cdt = $my_row[QUO_PaymentTerms];
+            $q_deposit = $my_row[QUO_Deposit];
             $quotationList[] = new Quotation($q_id,$date,$c_name,$s_name,$c_add,$c_phone,$c_id,$s_id,$q_cdt,$q_deposit);
         }
         require("connection_close.php");
@@ -86,18 +85,19 @@ class Quotation
         $sql="SELECT * FROM QUOTATION NATURAL JOIN STAFF NATURAL JOIN CUSTOMER WHERE QUO_ID='$id' and C_ID = C_ID";
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
-        $q_id = $my_row["QUO_ID"];
-        $date = $my_row["QUO_Date"];
-        $c_name = $my_row["C_Name"];
-        $s_name = $my_row["S_Name"];
-        $c_add = $my_row["C_Address"];
-        $c_phone = $my_row["C_Phone"];
+        $q_id = $my_row[QUO_ID];
+        $date = $my_row[QUO_Date];
+        $c_name = $my_row[C_Name];
+        $s_name = $my_row[S_Name];
+        $c_add = $my_row[C_Address];
+        $c_phone = $my_row[C_Phone];
 
-        $c_id = $my_row["C_ID"];
-        $s_id = $my_row["S_ID"];
-        $q_cdt = $my_row["QUO_PaymentTerms"];
-        $q_deposit = $my_row["QUO_Deposit"];
-        $quotationList[] = new Quotation($q_id,$date,$c_name,$s_name,$c_add,$c_phone,$c_id,$s_id,$q_cdt,$q_deposit);
+        $c_id = $my_row[C_ID];
+        $s_id = $my_row[S_ID];
+        $q_cdt = $my_row[QUO_PaymentTerms];
+        $q_deposit = $my_row[QUO_Deposit];
+        require("connection_close.php");
+        return new Quotation($q_id,$date,$c_name,$s_name,$c_add,$c_phone,$c_id,$s_id,$q_cdt,$q_deposit);
 
     }
     public static function Update($qid,$date,$idcus,$idemp,$qcdt,$qdeposit,$oldid)

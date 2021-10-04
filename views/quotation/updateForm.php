@@ -2,7 +2,7 @@
 <label>รหัส <input type="text" name="QUO_ID" 
         value="<?php echo $quotation->QUO_ID;?>"/></label><br>
 <label>วันที่ <input type="date" name="QUO_DATE"
-        value="<?php echo $quotation->QUO_DATE;?>"/></label><br>
+        value="<?php echo $quotation->QUO_Date;?>"/></label><br>
 
         <label>ชื่อลูกค้า <select name="C_Name">
     <?php foreach($customerList as $c) {
@@ -27,7 +27,7 @@
         value="<?php echo $quotation->QUO_Deposit;?>"/></label><br>
 
 <input type="hidden"name="controller"value="quotation"/>
-<input type="hidden" name="oldid" value="<?php echo $quotation->Q_ID; ?>"/>
+<input type="hidden" name="oldid" value="<?php echo $quotation->QUO_ID; ?>"/>
 <button type= "submit"name="action"value="index">back</button>
 <button type= "submit"name="action"value="update">update</button>
 

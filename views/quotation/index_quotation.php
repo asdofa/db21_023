@@ -30,8 +30,8 @@ search</button>
     <td>$quotation->C_Address</td>
     <td>$quotation->C_Phone</td> 
     <td>$quotation->QUO_PaymentTerms</td> 
-    <td><a href=?controller=quotation&action=updateForm&Q_ID=$quotation->Q_ID>update</a></td>
-    <td><a href=?controller=quotation&action=deleteConfirm&Q_ID=$quotation->Q_ID>delete</a></td>
+    <td><a href=?controller=quotation&action=updateForm&QUO_ID=$quotation->QUO_ID>update</a></td>
+    <td><a href=?controller=quotation&action=deleteConfirm&QUO_ID=$quotation->QUO_ID>delete</a></td>
     </tr>"; 
 }
 echo "</table>";

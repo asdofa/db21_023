@@ -16,10 +16,10 @@
             $sql="SELECT * FROM CUSTOMER";
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc()){
-                $id=$my_row["C_ID"];
-                $name=$my_row["C_Name"];
-                $address=$my_row["C_Address"];
-                $phone=$my_row["C_Phone"];
+                $id=$my_row[C_ID];
+                $name=$my_row[C_Name];
+                $address=$my_row[C_Address];
+                $phone=$my_row[C_Phone];
                 $customerList[]=new CUSTOMER($id,$name,$address,$phone);
             }
             require("connection_close.php");
