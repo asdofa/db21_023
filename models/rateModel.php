@@ -91,8 +91,8 @@
         public static function update($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate,$ORATE_ID)
         {
             require("connection_connect.php");
-            $sql = "UPDATE RATE SET PROD_ID = '$PROD_ID', PROD_ID = '$RATE_ID' ,PROD_QTY = '$PROD_QTY' ,PROD_Price = '$PROD_Price' 
-            ,PROD_SCPrice = '$PROD_SCPrice' ,QTY_Rate = '$QTY_Rate' WHERE RATE_ID = '$ORATE_ID'";
+            $sql = "UPDATE RATE SET `PROD_ID` = '$PROD_ID', `PROD_ID` = '$RATE_ID' ,`PROD_QTY` = '$PROD_QTY' ,`PROD_Price` = '$PROD_Price' 
+            ,`PROD_SCPrice` = '$PROD_SCPrice' ,`QTY_Rate` = '$QTY_Rate' WHERE RATE_ID = '$ORATE_ID'";
             $result = $conn->query($sql);
             require("connection_close.php");
             return("update success $result row");
