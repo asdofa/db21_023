@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+<center>
+<head>
+<style>
+body {
+              background-color: #FFCDD2;
+              color: #eb8c4a;
+              font-family:FC Friday;
+              text-align: center;
+               }
+</style>
+</head>
+<body>
+
 <form method="get" action="">
 <label>รหัส <input type="text" name="QUO_ID"/></label><br>
 <label>วันที่ <input type="date" name="QUO_Date"/></label><br>
@@ -19,3 +34,7 @@
 <button type= "submit"name="action"value="addQuotation">Save</button>
 
 </form>
+
+</center>
+</body>
+</html>

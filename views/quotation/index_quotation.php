@@ -5,27 +5,28 @@
 <style>
 table {
   font-family: 'Arial';
+  background-color: #f4f4f4;
   font-size: 20px;
-  padding: 12px 30px;
   text-align: center;
   margin: 25px auto;
   border-collapse: collapse;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
 }
 table tr:hover {
-  background: #f4f4f4;
+  background: #eb8c4a;
 }
 table tr:hover td {
   color: #000;
 }
 table th, table td {
   color: #555;
+  padding: 12px 12px;
   border: 1px solid #eee;
   
   border-collapse: collapse;
 }
 table th {
-  background: #00cccc;
+  background: #eb8c4a;
   color: #fff;
   text-transform: uppercase;
 }
@@ -44,16 +45,16 @@ body {
 
 <table border = 1>
 <tr>
-<td>เลขที่ใบเสนอราคา</td>
-<td>วันที่</td>
-<td>ลูกค้า</td>
-<td>พนักงาน</td>
-<td>ที่อยู่ลูกค้า</td>
-<td>เบอร์โทร</td>
-<td>เงื่อนไขชำระ</td>
-<td>% มัดจำ</td>
-<td>update</td>
-<td>delete</td>
+<th>เลขที่ใบเสนอราคา</th>
+<th>วันที่</th>
+<th>ลูกค้า</th>
+<th>พนักงาน</th>
+<th>ที่อยู่ลูกค้า</th>
+<th>เบอร์โทร</th>
+<th>เงื่อนไขชำระ</th>
+<th>% มัดจำ</th>
+<th>update</th>
+<th>delete</th>
 </tr>
 <p>จัดทำโดย นางสาวธนานันท์ ติยะชัยพานิช รหัสนิสิต 6220503252</p>
 <p style="font-size:50px">ใบเสนอราคา!</p>
