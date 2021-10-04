@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <html>
 <center>
+<head>
+<style>
+table {
+  font-family: 'FC Friday';
+  font-size: 20px;
+  margin: 25px auto;
+  border-collapse: collapse;
+  border: 1px solid #eee;
+  border-bottom: 2px solid #00cccc;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
+}
+body {
+              background-color: #FFCDD2;
+              color: #eb8c4a;
+              font-family:FC Friday;
+              text-align: center;
+               }
+</style>
+</head>
 <body>
+
 <table border = 1>
 <tr>
 <td>เลขที่ใบเสนอราคา</td>
@@ -16,7 +36,7 @@
 <td>delete</td>
 </tr>
 <p>จัดทำโดย นางสาวธนานันท์ ติยะชัยพานิช รหัสนิสิต 6220503252</p>
-<p>ใบเสนอราคา!</p>
+<p style="font-size:50px">ใบเสนอราคา!</p>
 เพิ่มใบเสนอราคา <a href=?controller=quotation&action=newQuotation>click</a><br>
 <br /> 
 <form method="get" action="">
@@ -43,6 +63,6 @@ search</button>
 }
 echo "</table>";
 ?>
-</body>
 </center>
+</body>
 </html>
