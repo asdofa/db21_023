@@ -3,18 +3,15 @@
     {
         public $PROD_ID;
         public $PROD_Name;
-        public $PROD_Category;
-        public $PROD_Type;
-        public $PROD_Minimum;
-        public $PROD_Detail;
         public $RATE_ID;
         public $PROD_QTY;
         public $PROD_Price;
         public $PROD_SCPrice;
         public $QTY_Rate;
-        public function __construct($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate)
+        public function __construct($PROD_ID,$PROD_Name,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate)
         {
             $this->PROD_ID = $PROD_ID;
+            $this->PROD_Name = $PROD_Name;
             $this->RATE_ID = $RATE_ID;
             $this->PROD_QTY = $PROD_QTY;
             $this->PROD_Price = $PROD_Price;
@@ -25,17 +22,18 @@
         {
             $rateList=[];
             require("connection_connect.php");
-            $sql="SELECT * FROM RATE";
+            $sql="SELECT * FROM RATE NATURAL JOIN PRODUCT ";
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc())
             {
                 $PROD_ID = $my_row["PROD_ID"];
+                $PROD_Name = $my_row["PROD_Name"];
                 $RATE_ID = $my_row["RATE_ID"];
                 $PROD_QTY = $my_row["PROD_QTY"];
                 $PROD_Price = $my_row["PROD_Price"];
                 $PROD_SCPrice = $my_row["PROD_SCPrice"];
                 $QTY_Rate = $my_row["QTY_Rate"];
-                $rateList[] = new RATE($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
+                $rateList[] = new RATE($PROD_ID,$PROD_Name,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
             }
             require("connection_close.php");
             
@@ -52,22 +50,35 @@
             {
                 $PROD_ID = $my_row["PROD_ID"];
                 $PROD_Name = $my_row["PROD_Name"];
-                $PROD_Category = $my_row["PROD_Category"];
-                $PROD_Type = $my_row["PROD_Type"];
-                $PROD_Minimum = $my_row["PROD_Minimum"];
-                $PROD_Detail = $my_row["PROD_Detail"];
                 $RATE_ID = $my_row["RATE_ID"];
                 $PROD_QTY = $my_row["PROD_QTY"];
                 $PROD_Price = $my_row["PROD_Price"];
                 $PROD_SCPrice = $my_row["PROD_SCPrice"];
                 $QTY_Rate = $my_row["QTY_Rate"];
-                $rateList[] = new RATE($PROD_ID,$PROD_Name,$PROD_Category,$PROD_Type,$PROD_Minimum,$PROD_Detail,
-                $RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
+                $rateList[] = new RATE($PROD_ID,$PROD_Name,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
             }
             require("connection_close.php");
 
             return $rateList;
         }
+        public static function get($RATE_ID)
+        {
+            require("connection_connect.php");
+            $sql = "SELECT * FROM RATE NATURAL JOIN PRODUCT WHERE PRI_ID = '$RATE_ID' ";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $PROD_ID = $my_row["PROD_ID"];
+            $PROD_Name = $my_row["PROD_Name"];
+            $RATE_ID = $my_row["RATE_ID"];
+            $PROD_QTY = $my_row["PROD_QTY"];
+            $PROD_Price = $my_row["PROD_Price"];
+            $PROD_SCPrice = $my_row["PROD_SCPrice"];
+            $QTY_Rate = $my_row["QTY_Rate"];
+            require(" connection_close.php");
+            return new Rate($PROD_ID,$PROD_Name,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
+
+        }
+        
         public static function add($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate)
         {
             require("connection_connect.php");
