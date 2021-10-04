@@ -6,7 +6,7 @@ class QuotationDetailController
         $quotationDetailList = QuotationDetail::getAll();
         require_once("./views/QuotationDetail/index_quotationDetail.php");
     }
-    public function newQuotationDetail() //ยังไม่เปลี่ยน
+    public function newQuotationDetail() 
     {
         $quotationList = Quotation::getAll();
         $productstockList = ProductStock::getAll();
