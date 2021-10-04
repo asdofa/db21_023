@@ -27,7 +27,6 @@ class RateController
         $QTY_Rate = $_GET['QTY_Rate'];
         Rate::add($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
         RateController::index();
-
     }
     public function updateFormRate()
     {
@@ -58,7 +57,7 @@ class RateController
     }
     public function deleteRate()
     {
-        $ID=$_GET['PRI_ID'];
+        $ID=$_GET['RATE_ID'];
         Rate::delete($ID);
         RateController::index();
     }
