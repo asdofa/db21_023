@@ -46,8 +46,9 @@ class RateController
         $PROD_Price= $_GET['PROD_Price'];
         $PROD_SCPrice = $_GET['PROD_SCPrice'];
         $QTY_Rate = $_GET['QTY_Rate'];
+        $ORATE_ID = $_GET['ORATE_ID'];
 
-        Rate::update($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
+        Rate::update($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate,$ORATE_ID);
         RateController::index();
     }
     public function deleteRateConfirm()
