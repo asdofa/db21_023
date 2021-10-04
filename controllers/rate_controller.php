@@ -15,7 +15,7 @@ class RateController
     public function newRate()
     {
         $RateList = Rate::getAll();
-        require_once("./views/rate/index_rate.php");
+        require_once("./views/rate/new_rate.php");
     }
     public function addRate()
     {
@@ -34,7 +34,7 @@ class RateController
         $ID=$_GET['RATE_ID'];
         $RATE = Rate::get($ID);
         $RateList = product::getAll();
-        require_once("./views/rate/index_rate.php");
+        require_once("./views/rate/update_rate.php");
     }
 
     public function updateRate()
@@ -54,7 +54,7 @@ class RateController
     {
         $ID=$_GET['RATE_ID'];
         $RATE = Rate::get($ID);
-        require_once("./views/rate/index_rate.php");
+        require_once("./views/rate/delete_rate_Confirm.php");
     }
     public function deleteRate()
     {
