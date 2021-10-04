@@ -3,8 +3,7 @@
     <label>Product_ID <select name="PROD_ID">
             <?php foreach ($productList as $P)
             {
-                echo "<option value = $P->PROD_ID>
-                $P->PROD_ID</option>";
+                echo "<option value = $P->PROD_ID> $P->PROD_ID</option>";
             }
             ?>
         </select></label><br>
