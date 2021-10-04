@@ -19,13 +19,13 @@ table tr:hover td {
 }
 table th, table td {
   color: #555;
-  padding: 12px 30px;
+  padding: 12px 25px;
   border: 1px solid #eee;
   
   border-collapse: collapse;
 }
 table th {
-  background: #00cccc;
+  background: #eb8c4a;
   color: #fff;
   text-transform: uppercase;
 }
