@@ -12,6 +12,7 @@ class QuotationDetailController
         $quotationList = Quotation::getAll();
         $productstockList = ProductStock::getAll();
         $productList = Product::getAll();
+        $colorList = Color::getAll();
         require_once("./views/QuotationDetail/newQuotationDetail.php");
     }
     public function addQuotationDetail()
@@ -20,12 +21,12 @@ class QuotationDetailController
         $quo_id = $_GET['QUO_ID'];
         $quoDetail_id = $_GET['QD_ID'];
         $prodstock_id = $_GET['PRODSTOCK_ID'];
-        $prod_name = $_GET['PROD_Name'];
-        $color_name = $_GET['Color_Name'];
+        $prod_id = $_GET['PROD_ID'];
+        $color_id = $_GET['Color_ID'];
         $qd_qty = $_GET['QD_QTY'];
         $qd_colorqty = $_GET['QD_ColorQTY'];
 
-        QuotationDetail::Add($quo_id,$quoDetail_id,$prodstock_id,$prod_name,$color_name,$qd_qty,$qd_colorqty);
+        QuotationDetail::add($quo_id,$quoDetail_id,$prodstock_id,$prod_id,$color_id,$qd_qty,$qd_colorqty);
 
         QuotationDetailController::index();
     }
@@ -58,7 +59,7 @@ class QuotationDetailController
         $qd_colorqty = $_GET['QD_ColorQTY'];
         $old_id = $_GET['old_id'];
         
-        QuotationDetail::Update($quo_id,$quoDetail_id,$prodstock_id,$prod_name,$color_name,$qd_qty,$qd_colorqty,$old_id);
+        QuotationDetail::update($quo_id,$quoDetail_id,$prodstock_id,$prod_name,$color_name,$qd_qty,$qd_colorqty,$old_id);
         QuotationDetailController::index();
     }
 
