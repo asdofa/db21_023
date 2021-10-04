@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<center>
+<body>
 <table border = 1>
 <tr>
 <td>เลขที่ใบเสนอราคา</td>
@@ -21,6 +25,7 @@
         <button type="submit" name="action" value="search">
 search</button>
 <br /> 
+<p> </p>
 </form>
 <?php foreach($quotationList as $quotation){
     echo "<tr> 
@@ -38,3 +43,6 @@ search</button>
 }
 echo "</table>";
 ?>
+</body>
+</center>
+</html>

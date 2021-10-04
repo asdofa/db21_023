@@ -1,3 +1,4 @@
+echo "dsgsdgsgsdggsgsggsgdsgsg";
 <form method="get" action="">
 <label>QD_ID <input type="text" name="QD_ID"/></label><br>
 
