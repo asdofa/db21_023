@@ -82,7 +82,7 @@
         public static function add($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate)
         {
             require("connection_connect.php");
-            $sql = "INSERT INTO `RATE` (`PROD_ID`,`RATE_ID`,`PROD_QTY,PROD_Price`,`PROD_SCPrice`,`QTY_Rate`) VALUES ('$PROD_ID','$RATE_ID','$PROD_QTY','$PROD_Price','$PROD_SCPrice','$QTY_Rate')";
+            $sql = "INSERT INTO `RATE` (`PROD_ID`,`RATE_ID`,`PROD_QTY`,`PROD_Price`,`PROD_SCPrice`,`QTY_Rate`) VALUES ('$PROD_ID','$RATE_ID','$PROD_QTY','$PROD_Price','$PROD_SCPrice','$QTY_Rate')";
             $result = $conn->query($sql);
             require("connection_close.php");
             return("add success $result row");

@@ -25,7 +25,7 @@ class RateController
         $PROD_QTY = $_GET['PROD_QTY'];
         $PROD_Price= $_GET['PROD_Price'];
         $PROD_SCPrice = $_GET['PROD_SCPrice'];
-        $QTY_Rate = $_GET['QTY_Rate'];
+        $QTY_Rate = $_GET['QTY_RATE'];
         Rate::add($PROD_ID,$RATE_ID,$PROD_QTY,$PROD_Price,$PROD_SCPrice,$QTY_Rate);
         RateController::index();
     }
