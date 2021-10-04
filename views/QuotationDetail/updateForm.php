@@ -10,13 +10,30 @@
     ?>
     </select></label><br> 
 
-    <label>Product_ID <select name="PRODSTOCK_ID">
+    <label>ProductStock_ID <select name="PRODSTOCK_ID">
     <?php foreach($productstockList as $PS) {
         echo "<option value = $PS->psid";
         if($PS->psid==$quotationDetail->PRODSTOCK_ID){echo " selected='selected'";}
-         echo ">$PS->name $PS->color</option>";}
+         echo ">$PS->psid </option>";}
     ?>
-    </select></label><br> 
+    </select></label><br>
+
+    <label>Product_ID <select name="PROD_ID">
+        <?php foreach($productList as $P){
+        echo "<option value = $P->PROD_ID";
+        if($P->PROD_ID==$quotationDetail->PROD_ID){echo " selected='selected'";}
+         echo ">$P->PROD_ID </option>";}
+?>
+</select></label><br>
+
+<label>Color_Name <select name="Color_Name">
+        <?php foreach($colorList as $C){
+        echo "<option value = $C->id";
+        if($C->id==$quotationDetail->Color_ID){echo " selected='selected'";}
+         echo ">$C->name </option>";}
+?>
+</select></label><br>
+        
 
 <label>QD_QTY <input type="text" name="QD_QTY" 
         value="<?php echo $quotationDetail->QD_QTY;?>"/></label><br>
