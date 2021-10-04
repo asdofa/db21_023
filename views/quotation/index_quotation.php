@@ -6,7 +6,7 @@
 table {
   font-family: 'Arial';
   font-size: 20px;
-  padding: 12px 30;
+  padding: 12px 30px;
   text-align: center;
   margin: 25px auto;
   border-collapse: collapse;
