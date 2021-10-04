@@ -23,11 +23,10 @@
     <input type="hidden" name="controller" value="rate"/>
     <button type="submit" name="action" value="search">
     Search</button>
-</form>    
+</form>
 
 
-<?
-    qphp foreach($rateList as $rate)
+<?php foreach($rateList as $rate)
     {
         echo"<tr>
         <td>$rate->RATE_ID</td>
