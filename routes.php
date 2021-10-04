@@ -14,6 +14,12 @@ function call($controller, $action){
 							require_once("models/customerModels.php");
 							$controller = new QuotationController();
 							break;
+		case "quotationDetail" : require_once("models/QuotationDetailModel.php");
+								 require_once("models/quotationModel.php");
+								 require_once("models/ProductStockModel.php");
+								 require_once("models/productModel.php");
+								 $controller = new QuotationDetailController();
+								 break;
 		case "rate" : 	echo "dompsmgpms";
 						require_once("models/rateModel.php");
 						require_once("models/productModel.php");
