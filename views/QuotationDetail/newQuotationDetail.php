@@ -1,4 +1,3 @@
-<p>in to new Quotation Detail</p>
 <form method="get" action="">
 <label>QD_ID <input type="text" name="QD_ID"/></label><br>
 
@@ -22,3 +21,4 @@
 <button type= "submit"name="action"value="addQuotationDetail">Save</button>
 
 </form>
+
