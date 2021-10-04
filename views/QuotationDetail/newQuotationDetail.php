@@ -8,9 +8,9 @@
 </select></label><br>
 
 <label>ProductStock_ID <select name="PRODSTOCK_ID">
-<?php foreach($productStockList as $PS){
-        echo "<option value = $PS->PRODSTOCK_ID
-        >$PS->PRODSTOCK_ID</option>";}
+<?php foreach($productstockList as $PS){
+        echo "<option value = $PS->psid
+        >$PS->psid</option>";}
 ?>
 </select></label><br>
 

@@ -7,6 +7,7 @@
             $this->name=$name;
         }
         public static function getAll(){
+            echo "color getall";
             $colorList=[];
             require("connection_connect.php");
             $sql="SELECT * FROM COLOR";
