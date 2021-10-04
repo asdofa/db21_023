@@ -3,18 +3,19 @@ class RateController
 {
     public function index()
     {
-        $RateList = Rate::getAll();
+        echo "index";
+        $rateList = Rate::getAll();
         require_once("./views/rate/index_rate.php");
     }
     public function searchRate()
     {
         $key=$_GET['key'];
-        $RateList = Rate::search($key);
+        $rateList = Rate::search($key);
         require_once("./views/rate/index_rate.php");
     }
     public function newRate()
     {
-        $RateList = Rate::getAll();
+        $rateList = Rate::getAll();
         require_once("./views/rate/new_rate.php");
     }
     public function addRate()
@@ -32,8 +33,8 @@ class RateController
     public function updateFormRate()
     {
         $ID=$_GET['RATE_ID'];
-        $RATE = Rate::get($ID);
-        $RateList = product::getAll();
+        $rate = Rate::get($ID);
+        $rateList = product::getAll();
         require_once("./views/rate/update_rate.php");
     }
 
@@ -53,7 +54,7 @@ class RateController
     public function deleteRateConfirm()
     {
         $ID=$_GET['RATE_ID'];
-        $RATE = Rate::get($ID);
+        $rate = Rate::get($ID);
         require_once("./views/rate/delete_rate_Confirm.php");
     }
     public function deleteRate()
