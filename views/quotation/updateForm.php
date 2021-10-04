@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<center>
 <head>
 <style>
 body {
@@ -40,7 +39,7 @@ body {
 
 <label>%มัดจำ(เครดิตเป็น0) <input type="text" name="QUO_Deposit"
         value="<?php echo $quotation->QUO_Deposit;?>"/></label><br>
-
+<center>
 <input type="hidden"name="controller"value="quotation"/>
 <input type="hidden" name="oldid" value="<?php echo $quotation->QUO_ID; ?>"/>
 <button type= "submit"name="action"value="index">back</button>
