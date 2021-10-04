@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<center>
+<body>
 <table border = 1>
 <tr>
 <td>เลขที่ใบเสนอราคา</td>
@@ -13,7 +17,8 @@
 </tr>
 <p>จัดทำโดย นางสาวธนานันท์ ติยะชัยพานิช รหัสนิสิต 6220503252</p>
 <p>ใบเสนอราคา!</p>
-เพิ่มใบเสนอราคา <a href=?controller=quotation&action=newQuotation>click</a><br>
+เพิ่มใบเสนอราคา <a href=?controller=quotation&action=newQuotation>click</a>
+<br>
 <br /> 
 <form method="get" action="">
         <input type="text" name="key">
@@ -38,3 +43,6 @@ search</button>
 }
 echo "</table>";
 ?>
+</body>
+</center>
+</html>
