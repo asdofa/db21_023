@@ -12,7 +12,7 @@
 </tr>
 <p>โดย นางสาวนภัสสร จิระ รหัสนิสิต 6220504682</p>
 <p>รายละเอียดใบเสนอราคา</p>
-เพิ่มรายละเอียดใบเสนอราคา! <a href=?controller=quotation&action=newQuotation>click</a><br>
+เพิ่มรายละเอียดใบเสนอราคา! <a href=?controller=quotationDetail&action=newQuotationDetail>click</a><br>
 <br /> 
 <form method="get" action="">
         <input type="text" name="key">
